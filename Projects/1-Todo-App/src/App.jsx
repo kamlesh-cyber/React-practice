@@ -4,6 +4,7 @@ import TodoListItem from './Components/TodoListItem';
 import BharatClock from './Components/BharatClock';
 import HealthyFood from './Components/HealthyFood';
 import Container from './Components/Container';
+import ErroreMessage from './Components/ErroreMessage';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
       <hr />
 
       <h1>Healthy Foods</h1>
+      <ErroreMessage erroreMessage={erroreMessage}></ErroreMessage>
       <HealthyFood></HealthyFood>
     </Container>
   )
