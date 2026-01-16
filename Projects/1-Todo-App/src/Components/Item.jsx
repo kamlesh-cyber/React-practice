@@ -1,18 +1,13 @@
 import styles from "./Item.module.css"
 
 
- const Item = (({foodItem}) =>{
-
-   const handleCLick = (foodItem, event)=>{
-    console.log("event-->", event);
-        alert(`${foodItem} is clicked`);
-   }
+ const Item = (({foodItem, handleBuyButton}) =>{
 
     return(
         <div>
             <li className={`${styles.itemColor} list-group-item d-flex justify-content-between`}>
                 <span>{foodItem}</span> 
-                <button className="py-1 btn btn-primary" onClick={()=> handleCLick(foodItem, event)}>Buy me</button>
+                <button className="py-1 btn btn-primary" onClick={handleBuyButton}>Buy me</button>
             </li>
         </div>
     )
