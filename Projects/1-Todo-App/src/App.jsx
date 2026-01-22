@@ -21,6 +21,15 @@ function App() {
   }
 
   const [foodItem, setFoodItem] = useState(['Dal','Dosa','Idli']);
+  const [boughtFood, setBoughtFood] = useState([]);
+
+  const handleCLick = (foodItem, event) => {
+  if (!boughtFood.includes(foodItem)) {
+    const updatedBoughtFood = [...boughtFood, foodItem];
+    setBoughtFood(updatedBoughtFood);
+    console.log("updatedBoughtFood --->", updatedBoughtFood);
+  }
+};
 
 
   return (
@@ -43,7 +52,7 @@ function App() {
       <h1>Healthy Foods</h1>
       <InputBox onEnterHandler={(event)=>addOrSearchFood(event)}></InputBox>
       {emptyMsg && <ErroreMessage erroreMessage={"I'm Still Hungry!"}></ErroreMessage>}
-      <HealthyFood healthyFoodItemArr={foodItem} handleCLick={handleCLick}></HealthyFood>
+      <HealthyFood healthyFoodItemArr={foodItem} boughtFood={boughtFood} handleCLick={(foodItem) => handleCLick(foodItem, event)}></HealthyFood>
     </Container>
   )
 }
