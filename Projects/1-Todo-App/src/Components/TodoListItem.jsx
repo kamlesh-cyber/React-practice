@@ -5,7 +5,7 @@ function TodoListItem({todoName, todoDate}){
         <div className="row g-2 text-start my-1">
             <div className="col-5">{todoName}</div>
             <div className="col-5">{todoDate}</div>
-            <div className="col-2"><button className='btn btn-danger'>Delete</button></div>
+            <div className="col-2"><button className='btn btn-danger w-100'>Delete</button></div>
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import styles from "./Item.module.css"
 
 
- const Item = (({foodItem, handleBuyButton}) =>{
+ const Item = (({foodItem, handleBuyButton, bought}) =>{
 
     return(
         <div>
