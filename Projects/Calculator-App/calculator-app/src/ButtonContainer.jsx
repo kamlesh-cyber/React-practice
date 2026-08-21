@@ -1,13 +1,9 @@
 import Buttons from "./Buttons"
 
-const ButtonContainer = () =>{
-
-    let buttonsArr = ['C', '1', '2', '3', '+', '4', '5', '6', '-', '7', '8', '9', '*', '0', '.', '=', '/'];
-
-    
+const ButtonContainer = ({ buttonsArr, clickBtnFunction}) =>{
 
     return (<div id="button-container" className="d-flex flex-wrap justify-content-center mt-2">
-        {buttonsArr.map((item) => (<Buttons buttonName={item}></Buttons>))}
+        {buttonsArr.map((item) => (<Buttons key={item} buttonName={item} handleClick={clickBtnFunction}></Buttons>))}
     </div>);
 }
 
